@@ -1,0 +1,155 @@
+[
+  {
+    "product_id": "P001",
+    "product_title": "Apple iPhone 15 Pro Max",
+    "product_image": "https://shuttershopegypt.com/wp-content/uploads/2024/07/Apple-iPhone-15-Pro.webp9_.webp",
+    "category": "iPhone",
+    "price": 1299,
+    "description": "The flagship iPhone with A17 Pro chip, LiDAR, and USB‑C.",
+    "specification": [
+      "6.7-inch Super Retina XDR OLED",
+      "A17 Pro chip",
+      "48MP triple camera + LiDAR",
+      "USB‑C connector",
+      "Up to 2TB storage"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Apple MacBook Air M3 (15-inch)",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/MacBook-Air-M3-13-Inch-Starlight-7010.jpg",
+    "category": "MacBook",
+    "price": 1399,
+    "description": "Super-slim Air with M3 chip and long battery life.",
+    "specification": [
+      "15-inch Liquid Retina display",
+      "Apple M3 chip",
+      "18-hour battery life",
+      "Fanless design",
+      "MagSafe 3 charging"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Dell XPS 15 9530",
+    "product_image": "https://www.vertech.com.bd/_next/image?url=https%3A%2F%2Fadminapi.vertech.com.bd%2Fstorage%2Fmedia%2Flarge%2FDell-XPS-15-9530-a-6278.jpg&w=3840&q=75",
+    "category": "Laptop",
+    "price": 1799,
+    "description": "High-performance laptop with 4K OLED and 14th-gen Core i9.",
+    "specification": [
+      "15.6-inch 4K OLED touchscreen",
+      "Intel Core i9-14900H",
+      "32GB RAM, 1TB SSD",
+      "NVIDIA RTX 4060 GPU",
+      "Premium aluminum chassis"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P004",
+    "product_title": "Samsung Galaxy S24 Ultra",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Galaxy-S24-Ultra-Titanium-Black-1587.jpg",
+    "category": "Phone",
+    "price": 1199,
+    "description": "AI-powered Android phone with 200MP camera and S Pen.",
+    "specification": [
+      "6.8-inch QHD+ AMOLED 120Hz",
+      "Snapdragon 8 Gen 3",
+      "200MP quad-camera system",
+      "S Pen included",
+      "5000mAh battery with fast charging"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P005",
+    "product_title": "Apple Watch Series 9",
+    "product_image": "https://www.ryans.com/storage/products/main/apple-watch-series-9-45mm-gps-starlight-21701521683.webp",
+    "category": "SmartWatch",
+    "price": 399,
+    "description": "Health-focused smartwatch with new Double Tap gesture.",
+    "specification": [
+      "Always-On Retina display",
+      "S9 SiP chip",
+      "Double Tap gesture",
+      "Blood oxygen & temperature sensors",
+      "Up to 18 hours battery life"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Sony WH-1000XM5",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/5318-55349.jpg",
+    "category": "Accessories",
+    "price": 399,
+    "description": "Industry-leading noise cancelling over-ear headphones.",
+    "specification": [
+      "Auto NC optimizer",
+      "30-hour battery life",
+      "Touch controls",
+      "Hi-Res Audio support",
+      "Foldable, lightweight design"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P007",
+    "product_title": "Apple AirPods Pro (2nd Gen)",
+    "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8yq8VkM1AkYGuMa8LNC0B754FA4CmXcXhwg&s",
+    "category": "Accessories",
+    "price": 249,
+    "description": "USB‑C AirPods with improved ANC and spatial audio.",
+    "specification": [
+      "Active Noise Cancellation",
+      "Adaptive Transparency",
+      "USB‑C charging case",
+      "Spatial Audio with head tracking",
+      "Improved microphone array"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P008",
+    "product_title": "Google Pixel Watch 2",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Pixel-Watch-2-Polished-Silver-6103.jpg",
+    "category": "SmartWatch",
+    "price": 349,
+    "description": "Pixel smartwatch with Fitbit health tracking and LTE.",
+    "specification": [
+      "Heart-rate & skin-temp sensors",
+      "Wear OS 4",
+      "Built-in GPS & optional LTE",
+      "Fast charging",
+      "Fitness & sleep tracking"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": "P009",
+    "product_title": "Apple iPad Pro 11-inch M4",
+    "product_image": "https://www.custommacbd.com/cdn/shop/files/ipad-pro-M4-spaceblack-Custom-Mac-BD.png?v=1715928069",
+    "category": "Accessories",
+    "price": 999,
+    "description": "Tablet powerhouse with OLED display and M4 chip.",
+    "specification": [
+      "11-inch OLED display",
+      "Apple M4 chip",
+      "Face ID",
+      "Support for Apple Pencil Pro",
+      "USB‑C Thunderbolt 4 port"
+    ],
+    "availability": true,
+    "rating": 4.9
+  }
+]
