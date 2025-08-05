@@ -12,18 +12,24 @@ const Hero = () => {
       .then((data) => setGadgets(data));
   }, []);
 
+  // 👉 Helper function to filter by category
+  const filterByCategory = (category) => {
+    if (category === "All") return gadgets;
+    return gadgets.filter((gadget) => gadget.category === category);
+  };
+
   return (
     <div className="space-y-10">
       <h1 className="text-4xl text-center font-bold">
-        Explore Cutting-Edge Tech Gadget
+        Explore Cutting-Edge Tech Gadgets
       </h1>
 
       <div className="flex gap-5">
-        <div className="w-1/4 bg-green-500">
-          <h1>this is for category</h1>
+        {/* Sidebar */}
+        <div className="w-1/4">
           <Tabs>
-            <TabList className="flex flex-col">
-              <Tab>All Product</Tab>
+            <TabList className="flex flex-col gap-2 font-semibold">
+              <Tab>All</Tab>
               <Tab>Laptop</Tab>
               <Tab>Iphone</Tab>
               <Tab>MacBook</Tab>
@@ -31,21 +37,42 @@ const Hero = () => {
             </TabList>
 
             <TabPanel>
-              <h2>Any content 1</h2>
+              <ProductGrid gadgets={filterByCategory("All")} />
             </TabPanel>
             <TabPanel>
-              <h2>Any content 2</h2>
+              <ProductGrid gadgets={filterByCategory("Laptop")} />
+            </TabPanel>
+            <TabPanel>
+              <ProductGrid gadgets={filterByCategory("Iphone")} />
+            </TabPanel>
+            <TabPanel>
+              <ProductGrid gadgets={filterByCategory("MacBook")} />
+            </TabPanel>
+            <TabPanel>
+              <ProductGrid gadgets={filterByCategory("Accessories")} />
             </TabPanel>
           </Tabs>
         </div>
-        <div className="w-3/4 bg-amber-600 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center p-5">
-          {gadgets.map((gadget) => (
-            <Gadget key={gadget.product_id} gadget={gadget} />
-          ))}
-        </div>
+
+        {/* Product Grid is moved into TabPanels above */}
       </div>
     </div>
   );
 };
+
+// 🔁 Reusable component for product grid
+const ProductGrid = ({ gadgets }) => (
+  <div className="w-full col-span-3 p-4 bg-gray-100 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {gadgets.length > 0 ? (
+      gadgets.map((gadget) => (
+        <Gadget key={gadget.product_id} gadget={gadget} />
+      ))
+    ) : (
+      <p className="col-span-3 text-center text-xl font-medium">
+        No gadgets found.
+      </p>
+    )}
+  </div>
+);
 
 export default Hero;
