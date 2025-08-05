@@ -5,6 +5,7 @@ import Gadget from "../gadget/Gadget";
 
 const Hero = () => {
   const [gadgets, setGadgets] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
     fetch("/gadget.json")
@@ -12,67 +13,52 @@ const Hero = () => {
       .then((data) => setGadgets(data));
   }, []);
 
-  // 👉 Helper function to filter by category
   const filterByCategory = (category) => {
     if (category === "All") return gadgets;
-    return gadgets.filter((gadget) => gadget.category === category);
+    return gadgets.filter((item) => item.category === category);
   };
+
+  const categoryList = ["All", "Laptop", "Iphone", "MacBook", "Accessories"];
 
   return (
     <div className="space-y-10">
       <h1 className="text-4xl text-center font-bold">
-        Explore Cutting-Edge Tech Gadgets
+        Explore Cutting-Edge Tech Gadget
       </h1>
 
-      <div className="flex gap-5">
-        {/* Sidebar */}
-        <div className="w-1/4">
-          <Tabs>
-            <TabList className="flex flex-col gap-2 font-semibold">
-              <Tab>All</Tab>
-              <Tab>Laptop</Tab>
-              <Tab>Iphone</Tab>
-              <Tab>MacBook</Tab>
-              <Tab>Accessories</Tab>
-            </TabList>
+      <Tabs
+        selectedIndex={categoryList.indexOf(selectedCategory)}
+        onSelect={(index) => setSelectedCategory(categoryList[index])}
+      >
+        <div className="flex gap-5">
+          {/* Sidebar TabList */}
+          <TabList className="w-1/4 flex flex-col bg-green-100 p-4 rounded">
+            {categoryList.map((cat, i) => (
+              <Tab
+                key={i}
+                className="p-2 border rounded mb-2 cursor-pointer hover:bg-green-200"
+              >
+                {cat}
+              </Tab>
+            ))}
+          </TabList>
 
-            <TabPanel>
-              <ProductGrid gadgets={filterByCategory("All")} />
-            </TabPanel>
-            <TabPanel>
-              <ProductGrid gadgets={filterByCategory("Laptop")} />
-            </TabPanel>
-            <TabPanel>
-              <ProductGrid gadgets={filterByCategory("Iphone")} />
-            </TabPanel>
-            <TabPanel>
-              <ProductGrid gadgets={filterByCategory("MacBook")} />
-            </TabPanel>
-            <TabPanel>
-              <ProductGrid gadgets={filterByCategory("Accessories")} />
-            </TabPanel>
-          </Tabs>
+          {/* Main Content TabPanel */}
+          <div className="w-3/4">
+            {categoryList.map((cat, i) => (
+              <TabPanel key={i}>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filterByCategory(cat).map((gadget) => (
+                    <Gadget key={gadget.product_id} gadget={gadget} />
+                  ))}
+                </div>
+              </TabPanel>
+            ))}
+          </div>
         </div>
-
-        {/* Product Grid is moved into TabPanels above */}
-      </div>
+      </Tabs>
     </div>
   );
 };
-
-// 🔁 Reusable component for product grid
-const ProductGrid = ({ gadgets }) => (
-  <div className="w-full col-span-3 p-4 bg-gray-100 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {gadgets.length > 0 ? (
-      gadgets.map((gadget) => (
-        <Gadget key={gadget.product_id} gadget={gadget} />
-      ))
-    ) : (
-      <p className="col-span-3 text-center text-xl font-medium">
-        No gadgets found.
-      </p>
-    )}
-  </div>
-);
 
 export default Hero;
