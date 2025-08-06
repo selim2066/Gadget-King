@@ -10,6 +10,7 @@ import {
 import Error from './components/error/Error';
 import Root from './components/root/Root';
 import Home from './components/Routs/Home/Home';
+import GadgetDetails from './components/gadget/GadgetDetails';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>
+      },
+      {
+        path:"gadget/:product_id",
+        element: <GadgetDetails></GadgetDetails>,
+        loader: ()=> fetch("/gadget.json")
       }
     ]
   },
