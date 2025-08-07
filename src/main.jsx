@@ -11,6 +11,7 @@ import Error from './components/error/Error';
 import Root from './components/root/Root';
 import Home from './components/Routs/Home/Home';
 import GadgetDetails from './components/gadget/GadgetDetails';
+import ShowD from './components/practice/ShowD';
 
 const router = createBrowserRouter([
   {
@@ -24,8 +25,12 @@ const router = createBrowserRouter([
       },
       {
         path:"gadget/:product_id",
-        element: <GadgetDetails></GadgetDetails>,
-        loader: ()=> fetch("/gadget.json")
+       loader: ()=> fetch("/gadget.json"),
+        element: <GadgetDetails></GadgetDetails>
+      },
+      {
+        path:"/showD",
+        element:<ShowD></ShowD>
       }
     ]
   },

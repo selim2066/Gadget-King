@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Gadget = ({ gadget }) => {
   const {
+    product_id,
     product_title,
     product_image,
     category,
@@ -11,6 +13,9 @@ const Gadget = ({ gadget }) => {
     availability,
     rating,
   } = gadget;
+
+
+  console.log(product_id,price)
   return (
     <div>
       <div className="card w-75 h-[320px] bg-white shadow-sm flex flex-col">
@@ -25,7 +30,10 @@ const Gadget = ({ gadget }) => {
           <h2 className="card-title line-clamp-2">{product_title}</h2>
           <p>Price: {price}</p>
           <div className="card-actions mt-auto">
-            <button className="btn btn-soft btn-info">View Details</button>
+            <Link to={`gadget/${product_id}`}>
+              
+              <button className="btn btn-soft btn-info">View Details</button>
+            </Link>
           </div>
         </div>
       </div>

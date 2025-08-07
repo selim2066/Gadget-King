@@ -21,7 +21,7 @@ const banner = () => {
 
         <img
           className="mx-auto h-[500px] w-full object-cover rounded-3xl"
-          src="../../../public/assets/banner.jpg"
+          src="/assets/banner.jpg"
           alt=""
         />
       </div>

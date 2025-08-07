@@ -1,6 +1,6 @@
 [
   {
-    "product_id": "P001",
+    "product_id": "001",
     "product_title": "Apple iPhone 15 Pro Max",
     "product_image": "https://shuttershopegypt.com/wp-content/uploads/2024/07/Apple-iPhone-15-Pro.webp9_.webp",
     "category": "iPhone",
@@ -17,7 +17,7 @@
     "rating": 4.8
   },
   {
-    "product_id": "P002",
+    "product_id": "002",
     "product_title": "Apple MacBook Air M3 (15-inch)",
     "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/MacBook-Air-M3-13-Inch-Starlight-7010.jpg",
     "category": "MacBook",
@@ -34,7 +34,7 @@
     "rating": 4.9
   },
   {
-    "product_id": "P003",
+    "product_id": "003",
     "product_title": "Dell XPS 15 9530",
     "product_image": "https://www.vertech.com.bd/_next/image?url=https%3A%2F%2Fadminapi.vertech.com.bd%2Fstorage%2Fmedia%2Flarge%2FDell-XPS-15-9530-a-6278.jpg&w=3840&q=75",
     "category": "Laptop",
@@ -51,7 +51,7 @@
     "rating": 4.7
   },
   {
-    "product_id": "P004",
+    "product_id": "004",
     "product_title": "Samsung Galaxy S24 Ultra",
     "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Galaxy-S24-Ultra-Titanium-Black-1587.jpg",
     "category": "Phone",
@@ -68,7 +68,7 @@
     "rating": 4.7
   },
   {
-    "product_id": "P005",
+    "product_id": "005",
     "product_title": "Apple Watch Series 9",
     "product_image": "https://www.ryans.com/storage/products/main/apple-watch-series-9-45mm-gps-starlight-21701521683.webp",
     "category": "SmartWatch",
@@ -85,7 +85,7 @@
     "rating": 4.6
   },
   {
-    "product_id": "P006",
+    "product_id": "006",
     "product_title": "Sony WH-1000XM5",
     "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/5318-55349.jpg",
     "category": "Accessories",
@@ -102,7 +102,7 @@
     "rating": 4.8
   },
   {
-    "product_id": "P007",
+    "product_id": "007",
     "product_title": "Apple AirPods Pro (2nd Gen)",
     "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8yq8VkM1AkYGuMa8LNC0B754FA4CmXcXhwg&s",
     "category": "Accessories",
@@ -119,7 +119,7 @@
     "rating": 4.5
   },
   {
-    "product_id": "P008",
+    "product_id": "008",
     "product_title": "Google Pixel Watch 2",
     "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Pixel-Watch-2-Polished-Silver-6103.jpg",
     "category": "SmartWatch",
@@ -136,7 +136,7 @@
     "rating": 4.4
   },
   {
-    "product_id": "P009",
+    "product_id": "009",
     "product_title": "Apple iPad Pro 11-inch M4",
     "product_image": "https://www.custommacbd.com/cdn/shop/files/ipad-pro-M4-spaceblack-Custom-Mac-BD.png?v=1715928069",
     "category": "Accessories",
