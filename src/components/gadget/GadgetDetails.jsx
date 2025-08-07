@@ -49,15 +49,16 @@ const GadgetDetails = () => {
               <h3 className="text-xl font-bold">Price: {price}tk</h3>
               <p className="py-6">{description}</p>
               <p>
-                <span className="font-bold text-lg space-y-3">Specification: </span>
+                <span className="font-bold text-lg ">Specification: </span>
                 <ul>
                   {specification.map((spec, index) => (
-                    <li key={index}>
+                    <li className="text-gray-400" key={index}>
                       {index + 1}. {spec}
                     </li>
                   ))}
                 </ul>
               </p>
+              <h4 className="font-bold text-amber-500 py-3">Rating: {rating}</h4>
              <div className="flex gap-5 py-5">
                  <button className="btn btn-soft btn-success">Get Card</button>
               <button className="btn btn-circle">
@@ -80,7 +81,7 @@ const GadgetDetails = () => {
             </div>
           </div>
         </div>
-        <button className="btn border-none p-5" onClick={handleBack}>
+        <button className="btn border-none p-2" onClick={handleBack}>
           Back
         </button>
       </div>
