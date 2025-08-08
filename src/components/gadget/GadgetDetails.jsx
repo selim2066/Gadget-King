@@ -38,7 +38,7 @@ const GadgetDetails = () => {
         </div>
 
         {/* card  bg-amber-600 w-[1080px]*/}
-        <div className="hero  max-h-[567px] absolute -bottom-76 left-1/2 transform -translate-x-1/2 w-[70%] max-w-[1100px] bg-white border-4 border-white/30 rounded-3xl p-4 shadow-xl">
+        <div className="hero  max-h-[567px] absolute -bottom-96 left-1/2 transform -translate-x-1/2 w-[70%] max-w-[1100px] bg-white border-4 border-white/30 rounded-3xl p-4 shadow-xl">
           <div className="hero-content flex-col lg:flex-row">
             <img
               src={product_image}
