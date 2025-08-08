@@ -7,9 +7,9 @@ const CartContext = ({ children }) => {
 
   const addToCart = (item) => {
     setCart([...cart, item]);
-    console.log(cart)
+   
   };
-
+// console.log(cart)//
   return (
     <CartContexts.Provider value={{ cart, addToCart }}>
       {children}
