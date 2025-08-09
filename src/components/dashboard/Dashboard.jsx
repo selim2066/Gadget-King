@@ -27,41 +27,49 @@ const Dashboard = () => {
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
-        <div className="space-x-10">
+        
+      </div>
+      <div className="space-x-10 bg-slate-100 rounded-4xl p-5">
           <Tabs>
-            <TabList className="space-x-10">
+            <TabList className="space-x-10 text-center transform -translate-y-15 relative z-10">
               <Tab className="btn btn-info px-10 rounded-3xl">Cart</Tab>
               <Tab className="btn btn-info  px-10 rounded-3xl">WishList</Tab>
             </TabList>
 
             <TabPanel>
-                <div className="flex justify-between pt-10 items-center">
-                      <h1 className="text-xl font-bold">Cart</h1>
-                      <div className="flex gap-7 items-center">
-                        <h1 className="text-lg font-bold">Total Cost: </h1>
-                        <button className="btn rounded-4xl">Sort by Price</button>
-                        <button className="btn rounded-4xl">Purchase</button>
-                      </div>
-                    </div>
+              <div className="flex justify-between pt-10 items-center">
+                <h1 className="text-xl font-bold">Cart</h1>
+                <div className="flex gap-7 items-center">
+                  <h1 className="text-lg font-bold"> Total Cost: {cart.reduce((sum, item) => sum + item.price, 0)} </h1>
+                  <button className="btn rounded-4xl">Sort by Price</button>
+                  <button className="btn rounded-4xl">Purchase</button>
+                </div>
+              </div>
               {cart.map((singleCart) => {
                 return (
                   <>
-                  <div className="my-10 flex gap-5 items-center text-start">
-                    <figure>
-                      <img className="h-[124px] w-[200px] rounded-2xl" src={singleCart.product_image} alt="" />
-
-                    </figure>
-                    <div>
-                      <h1 className="text-xl font-bold">{singleCart.product_title}</h1>
-                      <p>{singleCart.description}</p>
-                      <p>Price:{singleCart.price}</p>
-
+                    <div className="my-10 flex gap-15 items-center text-start">
+                      <figure>
+                        <img
+                          className="h-[124px] w-[200px] rounded-2xl"
+                          src={singleCart.product_image}
+                          alt=""
+                        />
+                      </figure>
+                      <div>
+                        <h1 className="text-xl font-bold">
+                          {singleCart.product_title}
+                        </h1>
+                        <p>{singleCart.description}</p>
+                        <p>Price:{singleCart.price}</p>
+                      </div>
                     </div>
-                  </div>
                   </>
                 );
               })}
             </TabPanel>
+
+            {/* wishList */}
             <TabPanel>
               {cart.map((singleCart) => (
                 <h1 key={singleCart.product_id} className="text-white">
@@ -70,12 +78,8 @@ const Dashboard = () => {
               ))}
             </TabPanel>
           </Tabs>
-          {cart.map((singleCart) => {
-            <h1 className="text-blue-600">{singleCart.category}</h1>;
-            console.log(singleCart.category);
-          })}
+          
         </div>
-      </div>
       <div className="p-20 text-center"></div>
     </>
   );
