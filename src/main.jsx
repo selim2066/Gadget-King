@@ -10,6 +10,7 @@ import GadgetDetails from "./components/gadget/GadgetDetails";
 import ShowD from "./components/practice/ShowD";
 import Dashboard from "./components/dashboard/Dashboard";
 import CartContext from "./context/CartContext";
+import Statistics from "./components/statistics/Statistics";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
+      },
+      {
+path:"/statistics",
+element: <Statistics></Statistics>
       },
       {
         path: "/showD",
