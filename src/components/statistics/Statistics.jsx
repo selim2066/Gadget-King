@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { CartContexts } from "../../context/CartContext";// adjust path if needed
+import { CartContexts } from "../../context/CartContext";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from "recharts";
 
 const Statistics = () => {
-  const { cart } = useContext(CartContexts); // assuming cardList is your wishlist/cart array
+  const { cart } = useContext(CartContexts); 
 
   // Prepare chart data: each item will be { name: productName, price: productPrice }
   const data = cart.map(item => ({
