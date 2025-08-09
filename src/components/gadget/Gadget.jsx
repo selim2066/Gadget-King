@@ -19,11 +19,11 @@ const Gadget = ({ gadget }) => {
   return (
     <div>
       <div className="card w-75 h-[320px] bg-white shadow-sm flex flex-col">
-        <figure className="px-5 pt-5 h-[181px] flex items-center justify-center">
+        <figure className="px-5 pt-5 lg:h-[181px] flex items-center justify-center">
           <img
             src={product_image}
             alt={product_title}
-            className="rounded-xl object-contain max-h-[160px] w-full p-5"
+            className="rounded-xl object-contain lg:h-[160px] h-[30px]  w-full p-5"
           />
         </figure>
         <div className="card-body items-center text-center flex-grow">

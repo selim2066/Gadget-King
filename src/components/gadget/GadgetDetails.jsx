@@ -7,7 +7,7 @@ const GadgetDetails = () => {
   const { product_id } = useParams();
   const gadgetData = useLoaderData();
   const gadget = gadgetData.find((gadget) => gadget.product_id === product_id);
-  const { cart, addToCart }=useContext(CartContexts)
+  const { cart, addToCart, addWish,wish }=useContext(CartContexts)
   //onClick={()=>addToCart(gadget)}
 
   const {
@@ -62,7 +62,7 @@ const GadgetDetails = () => {
               <h4 className="font-bold text-amber-500 py-3">Rating: {rating}</h4>
              <div className="flex gap-5 py-5">
                  <button className="btn btn-soft btn-success" onClick={()=>addToCart(gadget)} >Get Card</button>
-              <button className="btn btn-circle">
+              <button className="btn btn-circle" onClick={()=>addWish(gadget)} >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
