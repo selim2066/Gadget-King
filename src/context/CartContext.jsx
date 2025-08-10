@@ -26,9 +26,10 @@ const CartContext = ({ children }) => {
   }
   // console.log(cart)//
 
-  const count=cart.length
+  const cartsCount=cart.length
+  const wishCount=wish.length
   return (
-    <CartContexts.Provider value={{ cart, addToCart, addWish, wish, removeCart, removeWish, count }}>
+    <CartContexts.Provider value={{ cart, addToCart, addWish, wish, removeCart, removeWish, cartsCount, wishCount }}>
       {children}
     </CartContexts.Provider>
   );
