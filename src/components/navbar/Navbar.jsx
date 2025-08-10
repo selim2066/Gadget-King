@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContexts } from "../../context/CartContext";
 
 const Navbar = () => {
+  const {count} = useContext(CartContexts)
+  console.log(count)
   const links = (
     <>
       <Link to="/">
@@ -53,7 +56,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end gap-5">
-        <a className="btn">
+        <a className="btn relative">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -70,6 +73,7 @@ const Navbar = () => {
             <circle cx="19" cy="21" r="1" />
             <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
           </svg>
+          <p className="text-white font-bold absolute bg-amber-500 p-1 rounded-4xl -top-3 -right-1">{count}</p>
         </a>
         <a className="btn">
           <svg
