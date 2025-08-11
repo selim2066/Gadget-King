@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { CartContexts } from "../../context/CartContext";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import PurchaseButton from "./PurchaseButton";
 
 const Dashboard = () => {
-  const { cart, wish, removeCart,removeWish } = useContext(CartContexts);
+  const { cart, wish, removeCart, removeWish } = useContext(CartContexts);
   const [sortedCart, setSortedCart] = React.useState([...cart]);
   const [isSorted, setIsSorted] = React.useState(false);
 
@@ -46,7 +47,7 @@ const Dashboard = () => {
                 <button onClick={handleSort} className="btn rounded-4xl">
                   {isSorted ? "Original Order" : "Sort by Price"}
                 </button>
-                <button className="btn rounded-4xl">Purchase</button>
+                <PurchaseButton />
               </div>
             </div>
             {sortedCart.map((singleCart) => (
@@ -68,7 +69,10 @@ const Dashboard = () => {
                   <p>{singleCart.description}</p>
                   <p>Price: {singleCart.price}</p>
                 </div>
-                <button onClick={()=>removeCart(singleCart.product_id)} className="text-red-700 btn">
+                <button
+                  onClick={() => removeCart(singleCart.product_id)}
+                  className="text-red-700 btn"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -110,7 +114,10 @@ const Dashboard = () => {
                   <p>{singleWish.description}</p>
                   <p>Price: {singleWish.price}</p>
                 </div>
-                <button onClick={()=>removeWish(singleWish.product_id)} className="text-red-700 btn">
+                <button
+                  onClick={() => removeWish(singleWish.product_id)}
+                  className="text-red-700 btn"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -128,7 +135,6 @@ const Dashboard = () => {
                   </svg>
                 </button>
               </div>
-              
             ))}
           </TabPanel>
         </Tabs>

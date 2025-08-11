@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element: <GadgetDetails></GadgetDetails>,
       },
       {
-        path: "/dashboard",
+        path: "/sezan",
         element: <Dashboard></Dashboard>,
       },
       {
