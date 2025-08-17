@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { CartContexts } from "../../context/CartContext";
 
 export default function PurchaseButton() {
   const [openModal, setOpenModal] = useState(false);
  const navigate = useNavigate();
+ const {cart}=useContext( CartContexts)
+ 
+ 
+ console.log(cart)
 
   const handleHome = () => {
     navigate("/"); 
