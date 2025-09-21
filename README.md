@@ -151,4 +151,3 @@ Here are some ideas for future work / enhancements:
 
 ---
 
-If you like, I can auto-generate a filled README with your specific dependencies (based on your `package.json`) so you can just drop it in. Do you want me to do that for you?
