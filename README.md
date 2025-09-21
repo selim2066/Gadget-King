@@ -88,24 +88,31 @@ Make sure you have the following installed:
 
 ## Project Structure
 
-Here’s an example of how your project files may be organized:
 
 ```
-gadget-king/
-├── public/
-│    └── index.html
+Gadget-King/
+├── public/               # Static files
 ├── src/
-│    ├── components/        # reusable UI components
-│    ├── pages/             # page components (Home, ProductDetail, Cart, Wishlist, etc.)
-│    ├── routes/            # routing setup
-│    ├── context/ or store/ # for state management / global state
-│    ├── utils/             # utilities/helpers (e.g. price sorting, API calls, etc.)
-│    ├── styles/            # Tailwind / DaisyUI configuration files
-│    └── assets/            # images, icons, etc.
+│   ├── assets/           # Images & icons
+│   ├── components/       # Reusable components
+│   │   ├── banner/
+│   │   ├── dashboard/
+│   │   ├── footer/
+│   │   ├── gadget/
+│   │   ├── navbar/
+│   │   ├── statistics/
+│   │   └── Routs/Home/
+│   ├── context/          # Global state (cart, wishlist, etc.)
+│   ├── App.jsx           # Main App component
+│   ├── main.jsx          # Entry point
+│   ├── App.css
+│   └── index.css
+├── index.html
 ├── package.json
 ├── tailwind.config.js
-├── postcss.config.js
+├── vite.config.js
 └── README.md
+
 ```
 
 ---
